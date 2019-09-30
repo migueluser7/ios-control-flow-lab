@@ -26,12 +26,13 @@ if conditionTwo {
  print("C")
 }
 print("D")
+
+// THE ANSWER IS 
+
+A C and D
 ```
 
-- A
-- B
-- C
-- D
+
 
 ***
 ## Question 2
@@ -48,13 +49,13 @@ switch appInfo {
  default:
  print("I'm not quite sure what you are looking at")
 }
+
+//THE ANSWER IS
+
+myCoolApp hasn't released yet
+
 ```
 
-- appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
 
 ***
 ## Question 3
@@ -73,12 +74,13 @@ case is Double:
 default:
  print("D")
 }
+
+//THE ANSWER IS
+
+D
 ```
 
-- A
-- B
-- C
-- D
+]
 
 ***
 ## Question 4
@@ -96,6 +98,12 @@ case "skittles":
 case "snickers":
  print("Hungry? Grab a Snickers")
 }
+
+// THE ANSWER IS
+
+- No default case in the switch statement
+
+
 ```
 
 - No parentheses around the conditions
@@ -111,7 +119,21 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
+// THE ANSWER IS
+
+let currentWeather = "rain"
+
+switch currentWeather {
+case "rain":
+print("bring an umbrella")
+case "sunny":
+print("its sunny out")
+case "snow":
+print("its snowing out")
+default:
+    print("idk what the weather is like")
+}
+
 ```
 
 ***
@@ -123,7 +145,12 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
-// enter code below
+// THE ANSWER IS
+
+let firstName = "John"
+let lastName = "Appleseed"
+var fullName = "\(firstName) \(lastName)"
+
 ```
 
 ***
@@ -141,7 +168,17 @@ if temperatureInFahrenheit <= 40 {
  print("Weather is moderate.")
 }
 
-//Re-written statement here
+// THE ANSWER IS
+
+var temperatureInFahrenheit = 99
+switch temperatureInFahrenheit {
+case 0...40:
+ print("It's cold out.")
+case 85...:
+ print("It's really warm.")
+ default:
+ print("Weather is moderate.")
+}
 
 ```
 
@@ -158,6 +195,17 @@ if {
 else {
  print("You lose!")
 }
+
+// THE ANSWER IS
+
+var answer = true
+if answer == true {
+ print("You win!")
+} 
+else {
+ print("You lose!")
+}
+
 ```
 ***
 
@@ -184,6 +232,30 @@ var numberOfSides = 2
 Output:
 Error
 
+// THE ANSWER IS
+
+var numberOfSides = 5
+switch numberOfSides {
+case 3:
+print("triangle")
+case 4:
+print("square")
+case 5:
+print("pentagon")
+case 6:
+print("hexagon")
+case 7:
+print("heptagon")
+case 8:
+print("octagon")
+case 9:
+ print("nonagon")
+case 10:
+    print("decagon")
+ default:
+ print("error")
+}
+
 ```
 ***
 
@@ -199,6 +271,26 @@ Numeric Score 	Letter Grade
 70 - 79 	C
 65 - 69 	D
 Below 65 	F
+
+// THE ANSWER IS
+
+var grade = 100
+switch grade {
+case 100:
+print("A+")
+case 90...99:
+print("A")
+case 80...89:
+print("B")
+case 70...79:
+print("C")
+case 65...69:
+print("D")
+case 0..<65:
+print("F")
+ default:
+ print("error")
+}
 ```
 ***
 
@@ -215,6 +307,21 @@ if firstName == "Peter" {
  let lastName = "Collins"
 }
 let fullName = firstName + " " + lastName
+
+//THE ANSWER IS
+
+let firstName = "Peter"
+var lastName = " "
+
+if firstName == "Peter" {
+ var lastName = "Gabriel"
+}
+if firstName == "Phil" {
+ var lastName = "Collins"
+}
+var fullName = firstName + lastName
+print(fullName)
+
 ```
 ***
 
