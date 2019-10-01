@@ -106,11 +106,6 @@ case "snickers":
 
 ```
 
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
-- No default case in the switch statement
-- No print statement right outside the switch statement
-
 ***
 ## Question 5
 
@@ -150,6 +145,7 @@ let lastName = "Appleseed"
 let firstName = "John"
 let lastName = "Appleseed"
 var fullName = "\(firstName) \(lastName)"
+print("the fellows full name is \(fullName)")
 
 ```
 
@@ -199,9 +195,9 @@ else {
 // THE ANSWER IS
 
 var answer = true
-if answer == true {
+if answer {
  print("You win!")
-} 
+}
 else {
  print("You lose!")
 }
@@ -332,6 +328,28 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 ```swift
 let nameAndBirthYear: (String, Int)
 
+// THE ANSWER IS
+
+var nameandBirthYear = ("one", 1985)
+
+if (1990...1999).contains(nameandBirthYear.1) {
+    print("you are in your twenties")
+}
+if (1980...1989).contains(nameandBirthYear.1){
+    print("you are in your thirties")
+}
+
+var nameAndBirthYear = ("miguel", 1995)
+
+switch nameAndBirthYear.1 {
+case 1990...1999:
+    print("you are in your twenties")
+case 1980...1989:
+    print("you are in your thirties")
+default:
+    print("your age doesnt fall within a range")
+}
+
 ```
 ***
 
@@ -354,16 +372,23 @@ case 42:
  print("The answer to life, the universe and everything")
 default:
  print("Some uninteresting number")
+ 
+ 
+ // THE ANSWER IS
+ 
+ What happens when you change number to:
+
+ -a. 365? = it will print "Days in year"
+
+ -b. 1024? = it will print "Bytes in a Kilobyte"
+
+ -c. 65? = it will print "Some uninteresting number"
+
+ What happens when you remove the default clause?
+ 
+  it will print "error"
 ```
-What happens when you change number to:
 
--a. 365?
-
--b. 1024?
-
--c. 65?
-
-What happens when you remove the default clause?
 
 ***
 
@@ -385,7 +410,33 @@ var message = String()
 if population > 10000 {
  message = "\(population) is a large town"
 }
+
+// THE ANSWER IS
+
+var population: Int = 10000
+var message = String()
+
+if population > 10000 {
+ message = "\(population) is a large town"
+}
+else if population < 10000 && population > 5000 {
+    message = "a medium size town"
+}
+else {
+    message = "it's a mid-size town"
+}
+
+switch population {
+case 10001...:
+    message = "\(population) is a large town"
+case 5000..<10000:
+    message = "a medium size town"
+default:
+    message = "it's a mid-size town"
+}
 ```
+
+
 ***
 
 ## Question 15
@@ -398,5 +449,25 @@ b. Using a switch statement
 
 ```swift
 let myTuple: (Int, Int) = (5, 10)
+
+// THE ANSWER IS
+
+A
+
+let myTuple: (Int, Int) = (5, 10)
+
+if myTuple.0 + myTuple.1 >= 15 {
+    print("the sum is at least 15")
+}
+
+B
+
+switch myTuple.0 + myTuple.1 {
+case 15...:
+    print("the sum is at least 15")
+default:
+    print("it is not at least 15")
+}
+
 ```
 ***
